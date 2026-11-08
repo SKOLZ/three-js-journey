@@ -52,6 +52,9 @@ box1Config
     mesh.geometry.dispose();
     mesh.geometry = new THREE.BoxGeometry(1, 1, 1, value, value, value);
   });
+
+const material2 = new THREE.MeshNormalMaterial();
+material2.flatShading = true;
 // mesh.scale.x = 2;
 // mesh.scale.y = 2;
 // mesh.rotation.reorder("XZY");
@@ -61,11 +64,11 @@ box1Config
 // mesh.position.normalize();
 // scene.add(mesh);
 
-const mesh2 = new THREE.Mesh(geometry, material);
+const mesh2 = new THREE.Mesh(geometry, material2);
 mesh2.position.set(-2, 0, 0);
 // scene.add(mesh2);
 
-const mesh3 = new THREE.Mesh(geometry, material);
+const mesh3 = new THREE.Mesh(geometry, material2);
 mesh3.position.set(2, 0, 0);
 // scene.add(mesh3);
 
